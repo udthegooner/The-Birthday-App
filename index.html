@@ -5,7 +5,7 @@
 	<title> The Birthday App </title>
 	<link href="style.css" type="text/css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Francois+One|Open+Sans|PT+Sans|Roboto:300|Titillium+Web:300|Ubuntu:300" rel="stylesheet">
-	<script src="homepage.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <head>
 
 <body>
@@ -16,11 +16,16 @@
 		</div>
 		
 		<div class = "form">
-			<form action="http://localhost:8000/entries" method="post">
-				<input id=namespace name="name" type="text" autocomplete="off" spellcheck="false" autocorrect="off"/>
-				<input id=button type="submit"/>
+			<form action="http://localhost:8000/entries" method="post" id="formid">
+				<input id="namespace" name="name" type="text" autocomplete="off" spellcheck="false" autocorrect="off"/>
+				<input id="button" type="submit"/>
+				<div id="innerForm">
+				
+				</div>
 			</form> 
 		</div>
-	</div>	
+	</div>
+	<script src="homepage.js"></script>
+
 </body>
 </html>
