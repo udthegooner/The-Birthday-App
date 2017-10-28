@@ -6,26 +6,33 @@
 	<link href="style.css" type="text/css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Francois+One|Open+Sans|PT+Sans|Roboto:300|Titillium+Web:300|Ubuntu:300" rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.js"></script>
 <head>
 
 <body>
 	<div class= "content">
 		<div class = "header">
 			<h1> Welcome to The Birthday App! </h1>
-			<h3> Whose birthday are we celebrating? </h3>
+			<br>
 		</div>
 		
 		<div class = "form">
 			<form action="http://localhost:8000/entries" method="post" id="formid">
-				<input id="namespace" name="name" type="text" autocomplete="off" spellcheck="false" autocorrect="off"/>
-				<input id="button" type="submit"/>
-				<div id="innerForm">
+				<h3> Whose birthday are we celebrating? </h3>
+				<input name="name" id="name_field" class="fields" type="text" autocomplete="off" spellcheck="false" autocorrect="off"/>
 				
-				</div>
 			</form> 
 		</div>
 	</div>
 	<script src="homepage.js"></script>
+	
+	<script id="form-template" type="form/template">
+		<br>
+		<h3> When is {{data}}'s birthday?</h3>
+		<input name="date" id="date_field" class="fields" type="text" placeholder="MM/DD" autocomplete="off" spellcheck="false" autocorrect="off"/>
+		<br>
+		<input id="button" type="submit"/>
+	</script>
 
 </body>
 </html>
